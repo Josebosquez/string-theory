@@ -3,7 +3,7 @@
  ******************/
 function xify(str){
   let newStr = "";
-  for (const value of str){
+  for (i = 0; i < str.length; i++){
     newStr = newStr + "x";
   }
       return newStr;
@@ -19,12 +19,21 @@ function yellingChars(str){
 }
 
 function indexedChars(str){
-
+  let str1 = "";
+  for (i = 0; i < str.length; i++){
+    str1 = str1 + i + str[i];
+  }
+  return str1
 }
 
-function numberedChars(){
-  
-}
+function numberedChars(str){
+  let str1 = "";
+  for (i = 0; i < str.length; i++){
+    str1 += "(" + (i+1) + ")" + str[i];
+    }
+    return str1;
+  }
+
 
 
 

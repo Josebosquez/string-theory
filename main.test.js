@@ -52,22 +52,32 @@ describe('indexedChars', () => {
     const char2 = 'z'
     const indexed1 = '0a'
     const indexed2 = '0z'
-
+    
     expect(indexedChars(char1)).toBe(indexed1);
     expect(indexedChars(char2)).toBe(indexed2);
   })
-
+  
   it(`adds the index of each character before that character in the given string`, () => {
     const str1 = 'hello';
     const indexed1 = '0h1e2l3l4o';
     const str2 = 'bye';
     const indexed2 = '0b1y2e';
-
+    
     expect(indexedChars(str1)).toBe(indexed1);
     expect(indexedChars(str2)).toBe(indexed2);
   })
 })
 
+describe('numberedChars', () => {
+  it(`adds a 1 in parentheses before a one-character string`, () => {
+    const char1 = 'a'
+    const char2 = 'z'
+    const numbered1 = '(1)a'
+    const numbered2 = '(1)z'
+
+    expect(numberedChars(char1)).toBe(numbered1);
+    expect(numberedChars(char2)).toBe(numbered2);
+  })
 describe('exclaim', () => {
   it(`returns a sentence with every question mark changed to an exclamation point`, () => {
     expect(exclaim('I am the best?')).toBe('I am the best!')
@@ -142,16 +152,6 @@ describe('onlyVowels', () => {
   })
 })
 
-describe('numberedChars', () => {
-  it(`adds a 1 in parentheses before a one-character string`, () => {
-    const char1 = 'a'
-    const char2 = 'z'
-    const numbered1 = '(1)a'
-    const numbered2 = '(1)z'
-
-    expect(numberedChars(char1)).toBe(numbered1);
-    expect(numberedChars(char2)).toBe(numbered2);
-  })
 
   it(`adds the number of each character before that character in the given string`, () => {
     const str1 = 'hello';
