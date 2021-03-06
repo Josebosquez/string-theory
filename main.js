@@ -1,10 +1,30 @@
 /******************
  * YOUR CODE HERE *
  ******************/
+function xify(str){
+  let newStr = "";
+  for (const value of str){
+    newStr = newStr + "x";
+  }
+      return newStr;
+}
 
 
+function yellingChars(str){
+  let newStr = "";
+  for (i = 0; i < str.length; i++){
+    newStr += str[i] + "!";
+  }
+    return newStr;
+}
 
+function indexedChars(str){
 
+}
+
+function numberedChars(){
+  
+}
 
 
 
