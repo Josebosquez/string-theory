@@ -1,44 +1,74 @@
 /******************
  * YOUR CODE HERE *
  ******************/
-function xify(str){
+function xify(str) {
   let newStr = "";
-  for (i = 0; i < str.length; i++){
+  for (i = 0; i < str.length; i++) {
     newStr = newStr + "x";
   }
-      return newStr;
+  return newStr;
 }
 
 
-function yellingChars(str){
+function yellingChars(str) {
   let newStr = "";
-  for (i = 0; i < str.length; i++){
+  for (i = 0; i < str.length; i++) {
     newStr += str[i] + "!";
   }
-    return newStr;
+  return newStr;
 }
 
-function indexedChars(str){
+function indexedChars(str) {
   let str1 = "";
-  for (i = 0; i < str.length; i++){
+  for (i = 0; i < str.length; i++) {
     str1 = str1 + i + str[i];
   }
   return str1
 }
 
-function numberedChars(str){
+function numberedChars(str) {
   let str1 = "";
-  for (i = 0; i < str.length; i++){
-    str1 += "(" + (i+1) + ")" + str[i];
-    }
-    return str1;
+  for (i = 0; i < str.length; i++) {
+    str1 += "(" + (i + 1) + ")" + str[i];
   }
+  return str1;
+}
+
+function exclaim(str) {
+  let str1 = "";
+  for (i = 0; i < str.length; i++) {
+    if (str[i] === "." || str[i] === "?") {
+      str1 += "!";
+    } else {
+      str1 = str1 + str[i];
+    }
+  } return str1
+}
+
+function repeatIt(str, input) {
+  let str1 = "";
+  for (i = 0; i < input; i++) {
+    str1 += str;
+  }
+  return str1;
+}
+
+function truncate(str) {
+  let str1 = "";
+  if (str.length > 18) {
+  for (i = 0; i < 15; i++) {
+      str1 += str[i]
+    } return str1 + "..."
+  } else {
+    return str;
+  }
+}
 
 
 
 
 
- /********************************************
+/********************************************
  * CODE DOWN HERE IS FOR INTERNAL USE ONLY. *
  *           PLEASE DON'T TOUCH!            *
  ********************************************/
@@ -102,6 +132,7 @@ if (typeof camelCase === 'undefined') {
 if (typeof crazyCase2ReturnOfCrazyCase === 'undefined') {
   crazyCase2ReturnOfCrazyCase = undefined;
 }
+
 
 
 module.exports = {
