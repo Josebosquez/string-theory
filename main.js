@@ -56,7 +56,7 @@ function repeatIt(str, input) {
 function truncate(str) {
   let str1 = "";
   if (str.length > 18) {
-  for (i = 0; i < 15; i++) {
+    for (i = 0; i < 15; i++) {
       str1 += str[i]
     } return str1 + "..."
   } else {
@@ -64,6 +64,17 @@ function truncate(str) {
   }
 }
 
+function ciEmailify(str) {
+let str1 = "";
+for (i = 0; i < str.length; i++) {
+  if (str[i] === " ") {
+    str1 += ".";
+  } else {
+    str1 += str[i];
+  }
+}
+return str1.toLowerCase() + "@codeimmersives.com"
+}
 
 
 
