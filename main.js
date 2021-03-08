@@ -132,38 +132,40 @@ function titleCase(string) {
   } return str;
 }
 
-// function camelCase (str){
-//   let str1 = "";
-//   let str2 = "";
-//   for (i = 0; i < str.length; i++){
-//     if (str[i] === " " && i >= 1){
-//       str1 += str[i].toUpperCase();
-//     } else {
-//       str1 += str[i].toLowerCase();
-//     }
-//   } for (i = 0; i < str1.length; i++){
-//     if (str1 !== " "){
-//       str2 += str1;
-//     }
-//   }
-//   return str2;
-// }
-function camelCase(camel) {
-  let casey = "";
-  let caseTwo = "";
-  for (element of camel) {
-    if (camel[i] === " " && i > 1) {
-      casey += camel[i].toUpperCase();
+function camelCase (str){
+  let str1 = "";
+  let str2 = "";
+  for (i = 0; i < str.length; i++){
+    if (str[i] === " " && i >= 1){
+      str1 += str[i].toUpperCase();
     } else {
-      casey += camel[i].toLowerCase();
+      str1 += str[i].toLowerCase();
     }
-  } for (element of casey) {
-    if (element !== " ") {
-      caseyTwo += element;
+  } for (i = 0; i < 1; i++){
+    if (str1 !== " "){
+      str2 += str1;
     }
   }
-  return caseTwo;
+  return str2;
 }
+// my attempt to use for of loops 
+// -------------------------------------------------
+// function camelCase(camel) {
+//   let casey = "";
+//   let caseTwo = "";
+//   for (element of camel) {
+//     if (camel[i] === " " && i > 1) {
+//       casey += camel[i].toUpperCase();
+//     } else {
+//       casey += camel[i].toLowerCase();
+//     }
+//   } for (element of casey) {
+//     if (element !== " ") {
+//       caseyTwo += element;
+//     }
+//   }
+//   return caseTwo;
+// }
 
 
 
