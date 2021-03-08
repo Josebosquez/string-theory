@@ -141,9 +141,9 @@ function camelCase (str){
     } else {
       str1 += str[i].toLowerCase();
     }
-  } for (i = 0; i < 1; i++){
-    if (str1 !== " "){
-      str2 += str1;
+  } for (value of str1){
+    if (value !== " "){
+      str2 += value;
     }
   }
   return str2;
@@ -154,7 +154,7 @@ function camelCase (str){
 //   let casey = "";
 //   let caseTwo = "";
 //   for (element of camel) {
-//     if (camel[i] === " " && i > 1) {
+//     if (camel[i-1] === " " && i >= 1) {
 //       casey += camel[i].toUpperCase();
 //     } else {
 //       casey += camel[i].toLowerCase();
