@@ -84,6 +84,27 @@ function reverse (str){
   return str1;
 }
 
+function onlyVowels (str){
+  let str1 = "";
+  for (i = 0; i < str.length; i++){
+  let vowels = (
+    str[i] === "A" || 
+      str[i] === "E" ||
+      str[i] === "I" ||
+      str[i] === "O" ||
+      str[i] === "U" ||
+      str[i] === "a" || 
+      str[i] === "e" ||
+      str[i] === "i" ||
+      str[i] === "o" ||
+      str[i] === "u"
+      );
+    if (vowels){
+      str1 += str[i];
+  }
+}
+return str1;
+}
 
 
 /********************************************
