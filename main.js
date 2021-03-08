@@ -108,17 +108,18 @@ function onlyVowels(str) {
 
 
 function crazyCase(str) {
-  let str2 = str.toLowerCase;
   let count = 0;
   let str1 = "";
-  // for (i=0; i < str.length; i++){
-  // if (i % 2 === 0){
-  while (str > count) {
+  for (i=0; i < str.length; i++){
+  if (count % 2 === 0){
     count += 1;
-    str1 += [i]
+    str1 += str[i].toLowerCase();
+  } else {
+    str1 += str[i].toUpperCase()
+  } 
   }
   return str1;
-}
+  }
 
 function titleCase(string) {
   let str = "";
