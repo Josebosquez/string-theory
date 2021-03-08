@@ -107,18 +107,18 @@ function onlyVowels(str) {
 }
 
 
-// function crazyCase(str) {
-//   let str2 = str.toLowerCase;
-//   let count = 0;
-//   let str1 = "";
-//   // for (i=0; i < str.length; i++){
-//   // if (i % 2 === 0){
-//   while (str > count) {
-//     count += 1;
-//     str1 += [i]
-//   }
-//   return str1;
-// }
+function crazyCase(str) {
+  let str2 = str.toLowerCase;
+  let count = 0;
+  let str1 = "";
+  // for (i=0; i < str.length; i++){
+  // if (i % 2 === 0){
+  while (str > count) {
+    count += 1;
+    str1 += [i]
+  }
+  return str1;
+}
 
 function titleCase(string) {
   let str = "";
@@ -167,6 +167,24 @@ function camelCase (str){
 //   return caseTwo;
 // }
 
+function crazyCase2ReturnOfCrazyCase(str) {
+  newStr = "";
+  strCount = 0
+	for (i = 0; i < str.length; i++) {
+    if (str[i] !== " "){
+      if (strCount % 2 === 0) {
+        newStr += str[i].toLowerCase();
+        strCount+=1
+      } else {
+        newStr += str[i].toUpperCase();
+        strCount+=1
+      }
+    } else {
+      newStr += ' ';
+    }
+	}
+	return newStr;
+}
 
 
 
