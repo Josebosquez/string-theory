@@ -136,7 +136,7 @@ function camelCase (str){
   let str1 = "";
   let str2 = "";
   for (i = 0; i < str.length; i++){
-    if (str[i] === " " && i >= 1){
+    if (str[i-1] === " " && i >= 1){
       str1 += str[i].toUpperCase();
     } else {
       str1 += str[i].toLowerCase();
@@ -148,7 +148,7 @@ function camelCase (str){
   }
   return str2;
 }
-// my attempt to use for of loops 
+// my attempt to use for of loops -----
 // -------------------------------------------------
 // function camelCase(camel) {
 //   let casey = "";
@@ -161,7 +161,7 @@ function camelCase (str){
 //     }
 //   } for (element of casey) {
 //     if (element !== " ") {
-//       caseyTwo += element;
+//       caseTwo += element;
 //     }
 //   }
 //   return caseTwo;
