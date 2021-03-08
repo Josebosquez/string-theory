@@ -65,46 +65,74 @@ function truncate(str) {
 }
 
 function ciEmailify(str) {
-let str1 = "";
-for (i = 0; i < str.length; i++) {
-  if (str[i] === " ") {
-    str1 += ".";
-  } else {
-    str1 += str[i];
+  let str1 = "";
+  for (i = 0; i < str.length; i++) {
+    if (str[i] === " ") {
+      str1 += ".";
+    } else {
+      str1 += str[i];
+    }
   }
-}
-return str1.toLowerCase() + "@codeimmersives.com"
+  return str1.toLowerCase() + "@codeimmersives.com"
 }
 
-function reverse (str){
+function reverse(str) {
   let str1 = "";
-  for (i = str.length -1; i >= 0; i--){
+  for (i = str.length - 1; i >= 0; i--) {
     str1 += str[i];
   }
   return str1;
 }
 
-function onlyVowels (str){
+function onlyVowels(str) {
   let str1 = "";
-  for (i = 0; i < str.length; i++){
-  let vowels = (
-    str[i] === "A" || 
+  for (i = 0; i < str.length; i++) {
+    let vowels = (
+      str[i] === "A" ||
       str[i] === "E" ||
       str[i] === "I" ||
       str[i] === "O" ||
       str[i] === "U" ||
-      str[i] === "a" || 
+      str[i] === "a" ||
       str[i] === "e" ||
       str[i] === "i" ||
       str[i] === "o" ||
       str[i] === "u"
-      );
-    if (vowels){
+    );
+    if (vowels) {
       str1 += str[i];
+    }
   }
+  return str1;
 }
-return str1;
+
+
+// function crazyCase(str) {
+//   let str2 = str.toLowerCase;
+//   let count = 0;
+//   let str1 = "";
+//   // for (i=0; i < str.length; i++){
+//   // if (i % 2 === 0){
+//   while (str > count) {
+//     count += 1;
+//     str1 += [i]
+//   }
+//   return str1;
+// }
+
+function titleCase(string) {
+  let str = "";
+  for (i = 0; i < string.length; i++) {
+    if (i === 0 ||
+      (string[i - 1] === " " && i >= 1)) {
+      str += string[i].toUpperCase();
+    } else {
+      str += string[i].toLowerCase();
+    }
+  } return str;
 }
+
+
 
 
 /********************************************
