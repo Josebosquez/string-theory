@@ -76,6 +76,13 @@ for (i = 0; i < str.length; i++) {
 return str1.toLowerCase() + "@codeimmersives.com"
 }
 
+function reverse (str){
+  let str1 = "";
+  for (i = str.length -1; i >= 0; i--){
+    str1 += str[i];
+  }
+  return str1;
+}
 
 
 
